@@ -147,162 +147,259 @@
           };
 
           const hamsterColors = {
-            normal: {
-              name: 'ノーマル',
-              description: '野生色。最も一般的な毛色で、灰褐色の体に背中の黒いラインが特徴です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop',
-              features: ['背中に黒い筋（ドーサルライン）', '灰褐色の体', 'お腹は白っぽい'],
-              genotype: 'BBMM'
-            },
-            blueSapphire: {
-              name: 'ブルーサファイア',
-              description: 'ノーマルの色が薄くなったバージョン。青みがかった灰色が美しい毛色です。',
-              imageUrl: 'https://images.unsplash.com/photo-1452857297128-d9c29adba80b?w=500&h=400&fit=crop',
-              features: ['青みがかった灰色', 'ノーマルより淡い', '背中に筋がある'],
-              genotype: 'bbMM'
-            },
-            mokaBrown: {
-              name: 'モカブラウン',
-              description: 'ノーマルを薄くしたような茶色。優しい印象の毛色です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop&sat=-30',
-              features: ['茶色系', 'ノーマルを薄くした色', '落ち着いた印象'],
-              genotype: 'BBmm/Bbmm'
-            },
-            moonGray: {
-              name: 'ムーングレー',
-              description: 'ブルサファをクリーム色にしたような色。黄目が特徴です。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&hue=30',
-              features: ['グレーがかったクリーム色', '黄色い目', '柔らかな印象'],
-              genotype: 'bmyw'
-            },
-            creamySapphire: {
-              name: 'クリーミーサファイア',
-              description: 'プドの目。ムーングレーより若干黄色が強い。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop&sat=-40',
-              features: ['クリーミーな色合い', 'ぶどう目', '黄色味が強い'],
-              genotype: 'bmyw'
-            },
-            pearl: {
-              name: 'パール',
-              description: '耳の後ろが黒い。黒が生先に残る白い毛色です。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop',
-              features: ['白い体', '耳の後ろが黒い', '黒が先端に残る'],
-              genotype: 'BMyW'
-            },
-            sapphirePearl: {
-              name: 'サファイアパール',
-              description: 'パールよりグレーの範囲が広く、ブルサファより白い。上品な印象です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop&sat=-80',
-              features: ['グレーの範囲が広い', 'ブルサファより白い', '淡いブルーグレー'],
-              genotype: 'bMyW'
-            },
-            whiteMoka: {
-              name: 'ホワイトモカ',
-              description: 'ラインが薄い茶色。耳の後ろは白いこともある。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&hue=20',
-              features: ['薄い茶色のライン', '耳の後ろは白い', '優しい色合い'],
-              genotype: 'BmWw'
-            },
-            whiteMoon: {
-              name: 'ホワイトムーン',
-              description: 'ほぼ白。背中の線も薄く、耳の後ろは白い。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&bri=20',
-              features: ['ほぼ白', '背中の線も薄い', '耳の後ろは白い'],
-              genotype: 'bmyW'
-            },
-            creamyLine: {
-              name: 'クリーミーライン（プディングパール）',
-              description: '背中に黄色の線が特徴的な毛色です。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop',
-              features: ['背中に黄色の線', 'クリーム色', '優しい印象'],
-              genotype: 'BMYW'
-            },
-            sapphireCreamyLine: {
-              name: 'サファイアクリーミーライン',
-              description: '白&薄いツレーの線？詳細は不明です。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&hue=200',
-              features: ['白っぽい', '薄いグレーの線', '詳細不明'],
-              genotype: 'bMYW'
-            },
-            creamyLineMoka: {
-              name: 'クリーミーラインモカ',
-              description: '茶っぽい線に毛先も茶っぽい。優しい色合いです。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop&sat=-20',
-              features: ['茶色の線', '毛先も茶色', '柔らかな印象'],
-              genotype: 'BmYW'
-            },
-            creamyLineMoon: {
-              name: 'クリーミーラインムーン',
-              description: '見た目はほぼクリーミーラインだが、線が薄かったり薄い。目の後ろは白い。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop&bri=15',
-              features: ['クリーミーラインに似る', '線が薄い', '目の後ろは白い'],
-              genotype: 'bmYW'
-            },
-            pudding: {
-              name: 'プディング',
-              description: '子どもの頃は黄色。大人になると黄緑茶系になり、目っぽくなる子も。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop',
-              features: ['子どもは黄色', '成長すると黄緑茶系', '目が赤っぽい場合も'],
-              genotype: 'BMYw'
-            },
-            sapphirePudding: {
-              name: 'サファイアプディング（ミルクティー）',
-              description: 'プディングのようにまたはほぼサファイアのようにいずれかの系・黄色や青色が優勢。背に淡い黄緑ミルクティー。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop&hue=200&sat=-30',
-              features: ['ミルクティー色', 'プディングとサファイアの中間', '淡い色合い'],
-              genotype: 'bMYw'
-            },
-            yellowMoka: {
-              name: 'イエローモカ（フレッシュ）',
-              description: '茶より濃い黄緑色。色は生涯は変わらない。',
-              imageUrl: 'https://images.unsplash.com/photo-1534339991000-12d37c4c9115?w=500&h=400&fit=crop&hue=40',
-              features: ['濃い黄緑色', '色は変わらない', '茶色より濃い'],
-              genotype: 'BmYw'
-            },
-            yellowMoon: {
-              name: 'イエロームーン',
-              description: 'かなり薄い白に近い黄色。背中の線も薄く、ほぼ白に近い。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&hue=50&bri=20',
-              features: ['白に近い薄い黄色', '背中の線も薄い', 'ほぼ白'],
-              genotype: 'bmYw'
-            },
-            blackJungarian: {
-              name: 'ブラックジャンガリアン',
-              description: '黒い毛色のジャンガリアンハムスター。希少な毛色です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop&bri=-50&sat=50',
-              features: ['黒い体', '希少な毛色', '濃い色合い'],
-              genotype: '---'
-            },
-            russianBlue: {
-              name: 'ロシアンブルー',
-              description: 'ブラックジャンガリアンの色が薄くなったバージョン。青みがかったグレーが特徴です。',
-              imageUrl: 'https://images.unsplash.com/photo-1452857297128-d9c29adba80b?w=500&h=400&fit=crop&bri=-20',
-              features: ['青みがかったグレー', 'ブラックより薄い', '落ち着いた色'],
-              genotype: '---'
-            },
-            snowWhite: {
-              name: 'スノーホワイト',
-              description: '背中の線もない真っ白な個体。ブルサファの突然変異ともいわれるが、詳細不明。',
-              imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&h=400&fit=crop&bri=30',
-              features: ['真っ白', '背中の線なし', '詳細不明'],
-              genotype: '---'
-            },
-            blackPearl: {
-              name: 'ブラックパール',
-              description: 'サファイアパールのブラックキャリア？詳細は不明です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop&bri=-30&sat=-40',
-              features: ['黒っぽいパール', 'サファイアパールより濃い', '詳細不明'],
-              genotype: '---'
-            },
-            pandaJungarian: {
-              name: 'パンダジャンガリアン',
-              description: 'ブラック遺伝子＋パイド？白と黒のまだら模様が特徴です。',
-              imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=400&fit=crop&contrast=50',
-              features: ['白と黒のまだら', 'パンダのような模様', '希少'],
-              genotype: '---'
-            }
+  normal: {
+    name: 'ノーマル',
+    description: '野生色。最も一般的な毛色で、灰褐色の体に背中の黒いラインが特徴です。',
+    imageUrl: 'images/normal.png',
+    features: ["背中に黒い筋（ドーサルライン）", "灰褐色の体", "お腹は白っぽい"],
+    genotype: 'BBMMYYWWAA BBMMYYWWAa BBMMYYWW-- BbMMYYWWAA BbMMYYWWAa BbMMYYWW-- BbMmYYWWAA BbMmYYWWAa BbMmYYWW-- BBMmYYWWAA BBMmYYWWAa BBMmYYWWaa BBMmYYWW-- BBMMYYWWaa BbMMYYWWaa BbMmYYWWaa'
+  },
+  bluesapphire: {
+    name: 'ブルーサファイア',
+    description: 'ノーマルの色が薄くなったバージョン。青みがかった灰色が美しい毛色です。',
+    imageUrl: 'images/bluesapphire.png',
+    features: ["青みがかった灰色", "ノーマルより淡い", "背中に筋がある"],
+    genotype: 'bbMM'
+  },
+  mokabrown: {
+    name: 'モカブラウン',
+    description: 'ノーマルを薄くしたような茶色。優しい印象の毛色です。',
+    imageUrl: 'images/mokabrown.png',
+    features: ["茶色系", "ノーマルを薄くした色", "落ち着いた印象"],
+    genotype: 'BBmm/Bbmm'
+  },
+  moongray: {
+    name: 'ムーングレー',
+    description: 'ブルサファをクリーム色にしたような色。黄目が特徴です。',
+    imageUrl: 'images/moongray.png',
+    features: ["グレーがかったクリーム色", "黄色い目", "柔らかな印象"],
+    genotype: 'bbmmYYWWaa bbmmYYWWAA bbmmYYWWAa bbmmYYWW--'
+  },
+  creamysapphire: {
+    name: 'クリーミーサファイア',
+    description: 'プドの目。ムーングレーより若干黄色が強い。',
+    imageUrl: 'images/creamysapphire.png',
+    features: ["クリーミーな色合い", "ぶどう目", "黄色味が強い"],
+    genotype: 'bbmmYYWWaa bbmmYYWWAA bbmmYYWWAa bbmmYYWW--'
+  },
+  pearl: {
+    name: 'パール',
+    description: '耳の後ろが黒い。黒が生先に残る白い毛色です。',
+    imageUrl: 'images/pearl.png',
+    features: ["白い体", "耳の後ろが黒い", "黒が先端に残る"],
+    genotype: 'BMyW'
+  },
+  sapphirepearl: {
+    name: 'サファイアパール',
+    description: 'パールよりグレーの範囲が広く、ブルサファより白い。上品な印象です。',
+    imageUrl: 'images/sapphirepearl.png',
+    features: ["グレーの範囲が広い", "ブルサファより白い", "淡いブルーグレー"],
+    genotype: 'bMyW'
+  },
+  whitemoka: {
+    name: 'ホワイトモカ',
+    description: 'ラインが薄い茶色。耳の後ろは白いこともある。',
+    imageUrl: 'images/whitemoka.png',
+    features: ["薄い茶色のライン", "耳の後ろは白い", "優しい色合い"],
+    genotype: 'BmWw'
+  },
+  whitemoon: {
+    name: 'ホワイトムーン',
+    description: 'ほぼ白。背中の線も薄く、耳の後ろは白い。',
+    imageUrl: 'images/whitemoon.png',
+    features: ["ほぼ白", "背中の線も薄い", "耳の後ろは白い"],
+    genotype: 'bmyW'
+  },
+  creamyline: {
+    name: 'クリーミーライン（プディングパール）',
+    description: '背中に黄色の線が特徴的な毛色です。',
+    imageUrl: 'images/creamyline.png',
+    features: ["背中に黄色の線", "クリーム色", "優しい印象"],
+    genotype: 'BMYW'
+  },
+  sapphirecreamyline: {
+    name: 'サファイアクリーミーライン',
+    description: '白&薄いグレーの線？詳細は不明です。',
+    imageUrl: 'images/sapphirecreamyline.png',
+    features: ["白っぽい", "薄いグレーの線", "詳細不明"],
+    genotype: 'bMYW'
+  },
+  creamylinemoka: {
+    name: 'クリーミーラインモカ',
+    description: '茶っぽい線に毛先も茶っぽい。優しい色合いです。',
+    imageUrl: 'images/creamylinemoka.png',
+    features: ["茶色の線", "毛先も茶色", "柔らかな印象"],
+    genotype: 'BmYW'
+  },
+  creamylinemoon: {
+    name: 'クリーミーラインムーン',
+    description: '見た目はほぼクリーミーラインだが、線が薄かったり薄い。目の後ろは白い。',
+    imageUrl: 'images/creamylinemoon.png',
+    features: ["クリーミーラインに似る", "線が薄い", "目の後ろは白い"],
+    genotype: 'bmYW'
+  },
+  pudding: {
+    name: 'プディング',
+    description: '子どもの頃は黄色。大人になると黄緑茶系になり、目っぽくなる子も。',
+    imageUrl: 'images/pudding.png',
+    features: ["子どもは黄色", "成長すると黄緑茶系", "目が赤っぽい場合も"],
+    genotype: 'BMYw'
+  },
+  'sapphirepudding-milktea': {
+    name: 'サファイアプディング（ミルクティー）',
+    description: 'プディングのようにまたはほぼサファイアのようにいずれかの系・黄色や青色が優勢。背に淡い黄緑ミルクティー。',
+    imageUrl: 'images/sapphirepudding-milktea.png',
+    features: ["ミルクティー色", "プディングとサファイアの中間", "淡い色合い"],
+    genotype: 'bMYw'
+  },
+  'sapphirepudding-normal': {
+    name: 'サファイアプディング（ノーマル）',
+    description: 'サファイアプディングの標準的なタイプ。',
+    imageUrl: 'images/sapphirepudding-normal.png',
+    features: ["標準的な色合い", "バランスの取れた色", "中間的な印象"],
+    genotype: ''
+  },
+  'sapphirepudding-beige': {
+    name: 'サファイアプディング（ベージュ）',
+    description: 'ベージュ寄りのサファイアプディング。',
+    imageUrl: 'images/sapphirepudding-beige.png',
+    features: ["ベージュ系", "柔らかい色合い", "優しい印象"],
+    genotype: ''
+  },
+  'sapphirepudding-brown': {
+    name: 'サファイアプディング（ブラウン）',
+    description: 'ブラウン寄りのサファイアプディング。',
+    imageUrl: 'images/sapphirepudding-brown.png',
+    features: ["ブラウン系", "濃いめの色合い", "落ち着いた印象"],
+    genotype: ''
+  },
+  yellowmoka: {
+    name: 'イエローモカ（フレッシュ）',
+    description: '茶より濃い黄緑色。色は生涯は変わらない。',
+    imageUrl: 'images/yellowmoka.png',
+    features: ["濃い黄緑色", "色は変わらない", "茶色より濃い"],
+    genotype: 'BmYw'
+  },
+  yellowmoon: {
+    name: 'イエロームーン',
+    description: 'かなり薄い白に近い黄色。背中の線も薄く、ほぼ白に近い。',
+    imageUrl: 'images/yellowmoon.png',
+    features: ["白に近い薄い黄色", "背中の線も薄い", "ほぼ白"],
+    genotype: 'bmYw'
+  },
+  snowwhite: {
+    name: 'スノーホワイト',
+    description: '背中の線もない真っ白な個体。ブルサファの突然変異ともいわれるが、詳細不明。',
+    imageUrl: 'images/snowwhite.png',
+    features: ["真っ白", "背中の線なし", "耳には色あり"],
+    genotype: '---'
+  },
+  rubyeyemokabrown: {
+    name: 'ルビーアイモカブラウン',
+    description: 'ルビーアイのモカブラウン。普通のモカブラウンよりも少し色が薄くなることも。',
+    imageUrl: 'images/rubyeyemokabrown.png',
+    features: ["耳には少し色が入ることも", "茶色の毛色", "背中の線くっきりめ"],
+    genotype: 'BBmmrr'
+  },
+  rubyeyeyellowmoka: {
+    name: 'ルビーアイイエローモカ',
+    description: 'ルビーアイのイエローモカ。赤い目と黄色の毛色が特徴です。背中の線はくっきりめ',
+    imageUrl: 'images/rubyeyeyellowmoka.png',
+    features: ["耳には少し色が入ることも", "黄色", "背中の線くっきりめ"],
+    genotype: 'BmYwrr'
+  },
+  rubyeyecreamylinemoka: {
+    name: 'ルビーアイクリーミーラインモカ',
+    description: 'ルビーアイのクリーミーラインモカ。赤い目と茶色の線が特徴で、背中以外にも茶色の毛が入ることも。',
+    imageUrl: 'images/rubyeyecreamylinemoka.png',
+    features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線くっきりめ"],
+    genotype: 'BmYWrr'
+  },
+  rubyeyewhitemoka: {
+    name: 'ルビーアイホワイトモカ',
+    description: 'ルビーアイのホワイトモカ。薄い茶色のラインが特徴で、背中以外にも茶色の毛が入ることも。',
+    imageUrl: 'images/rubyeyewhitemoka.png',
+    features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線くっきりめ"],
+    genotype: 'BmWwrr'
+  },
+  rubyeyemoon: {
+    name: 'ルビーアイムーングレー',
+    description: 'ルビーアイのムーングレー。毛色は黒目よりも薄くなりがちです。背中の線はあまり見えない。',
+    imageUrl: 'images/rubyeyemoon.png',
+    features: ["赤い目（ルビーアイ）", "背中の線もごく薄い", "耳の後ろは白い"],
+    genotype: 'bmywrr'
+  },
+  rubyeyeyellowmoon: {
+    name: 'ルビーアイイエロームーン',
+    description: 'ルビーアイのイエロームーン。ほぼ白に近い薄い黄色が特徴です。光の当たり方によっては白く見えることも。',
+    imageUrl: 'images/rubyeyeyellowmoon.png',
+    features: ["赤い目（ルビーアイ）", "背中の線もごく薄い", "耳の後ろは白い"],
+    genotype: 'bmYwrr'
+  },
+  rubyeyecreamylinemoon: {
+    name: 'ルビーアイクリーミーラインムーン',
+    description: 'ルビーアイのクリーミーラインムーン。黄土色、黄みよりの薄い背中の線。体毛はほぼ白です。',
+    imageUrl: 'images/rubyeyecreamylinemoon.png',
+    features: ["赤い目（ルビーアイ）", "黄みよりのごく薄い背中の線", "耳の後ろは白い"],
+    genotype: 'bmYWrr'
+  },
+  rubyeyewhitemoon: {
+    name: 'ルビーアイホワイトムーン',
+    description: 'ルビーアイのホワイトムーン。ほぼ白の毛色が特徴です。耳の後ろも白く、背中の線はほぼ見えません。',
+    imageUrl: 'images/rubyeyewhitemoon.png',
+    features: ["赤い目（ルビーアイ）", "背中の線はほぼ見えない", "耳の後ろは白い"],
+    genotype: 'bmyWrr'
+  },
+  blackjungarian: {
+    name: 'ブラックジャンガリアン',
+    description: '黒い毛色のジャンガリアンハムスター。希少な毛色です。',
+    imageUrl: 'images/blackjungarian.png',
+    features: ["黒い体", "希少な毛色", "濃い色合い"],
+    genotype: '---'
+  },
+  russianblue: {
+    name: 'ロシアンブルー',
+    description: 'ブラックジャンガリアンの色が薄くなったバージョン。青みがかったグレーが特徴です。',
+    imageUrl: 'images/russianblue.png',
+    features: ["青みがかったグレー", "ブラックより薄い", "落ち着いた色"],
+    genotype: '---'
+  },
+  pandajungarian: {
+    name: 'パンダジャンガリアン',
+    description: 'ブラック遺伝子＋パイド？白と黒の境界線がはっきりしたまだら模様が特徴です。',
+    imageUrl: 'images/pandajungarian.png',
+    features: ["白黒がくっきり", "パンダのような模様", "希少"],
+    genotype: '---'
+  },
+  bluepandajungarian: {
+    name: 'パンダジャンガリアン',
+    description: 'ブラック遺伝子＋パイド＋サファイア？白とブルーの境界線がはっきりしたまだら模様が特徴です。',
+    imageUrl: 'images/bluepandajungarian.png',
+    features: ["白黒がくっきり", "パンダのような模様", "希少"],
+    genotype: '---'
+  },
+  blackmearl: {
+    name: 'ブラックマール',
+    description: 'サファイアパールのブラックキャリア？詳細は不明です。パンダよりも全体が明るく、ふわっとした見た目。',
+    imageUrl: 'images/blackmearl.png',
+    features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
+    genotype: '---'
+  },
+  bluemearl: {
+    name: 'ブルーマール',
+    description: 'サファイアパールのブルーキャリア？詳細は不明です。パンダよりも全体が明るく、ふわっとした見た目。',
+    imageUrl: 'images/bluemearl.png',
+    features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
+    genotype: ''
+  },
+  pied: {
+    name: 'パイド（まだら模様）',
+    description: '様々な毛色にまだら模様が現れたもの。模様の入り方は個体差が大きい。',
+    imageUrl: 'images/pied.png',
+    features: ["まだら模様", "様々な毛色に現れる", "個体差が大きい"],
+    genotype: '---'
+  },
           };
-
           const colorKeys = Object.keys(hamsterColors);
 
           return (
@@ -440,7 +537,7 @@
                         >
                           <div className="gallery-item">
                             <img
-                              src={hamsterColors[key].imageUrl}
+                              src={hamsterColors[key].imageUrl.replace('.png', '_thumb.png')}
                               alt={hamsterColors[key].name}
                               onContextMenu={(e) => e.preventDefault()}
                               onDragStart={(e) => e.preventDefault()}
