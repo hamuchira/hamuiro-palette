@@ -130,6 +130,7 @@
           const [showFloatBtn, setShowFloatBtn] = useState(false);
           const [showImageModal, setShowImageModal] = useState(false);
           const [showCreditsPage, setShowCreditsPage] = useState(false);
+          const [showAboutPage, setShowAboutPage] = useState(false);
           const detailRef = useRef(null);
 
           const handleColorSelect = (colorKey) => {
@@ -425,31 +426,54 @@
                   </div>
                   <p style={{color: '#92400e', fontSize: '15px', fontWeight: '500', marginBottom: '16px'}}>あなたのハムちゃんの毛色を見つけよう</p>
                   <ShareButtons isTopPage={true} />
-                  <button
-                    onClick={() => setShowCreditsPage(true)}
-                    style={{
-                      marginTop: '16px',
-                      padding: '10px 20px',
-                      background: 'white',
-                      border: '2px solid #f59e0b',
-                      borderRadius: '8px',
-                      color: '#f59e0b',
-                      fontSize: '14px',
-                      fontWeight: '600',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      margin: '16px auto 0'
-                    }}
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                      <polyline points="7 10 12 15 17 10"></polyline>
-                      <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    写真提供について
-                  </button>
+                  <div style={{display: 'flex', gap: '12px', marginTop: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
+                    <button
+                      onClick={() => setShowAboutPage(true)}
+                      style={{
+                        padding: '10px 20px',
+                        background: 'white',
+                        border: '2px solid #f59e0b',
+                        borderRadius: '8px',
+                        color: '#f59e0b',
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                      }}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                      </svg>
+                      この辞典について
+                    </button>
+                    <button
+                      onClick={() => setShowCreditsPage(true)}
+                      style={{
+                        padding: '10px 20px',
+                        background: 'white',
+                        border: '2px solid #f59e0b',
+                        borderRadius: '8px',
+                        color: '#f59e0b',
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                      }}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      写真提供について
+                    </button>
+                  </div>
                 </div>
 
                 <div style={{display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '32px', flexWrap: 'wrap'}}>
@@ -785,6 +809,189 @@
                           fontSize: '16px',
                           fontWeight: '600',
                           cursor: 'pointer'
+                        }}
+                      >
+                        閉じる
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {showAboutPage && (
+                  <div className="image-modal" onClick={() => setShowAboutPage(false)}>
+                    <div 
+                      onClick={(e) => e.stopPropagation()} 
+                      style={{
+                        background: 'white',
+                        borderRadius: '16px',
+                        padding: '32px',
+                        maxWidth: '700px',
+                        maxHeight: '90vh',
+                        overflow: 'auto',
+                        position: 'relative'
+                      }}
+                    >
+                      <button 
+                        className="image-modal-close" 
+                        onClick={() => setShowAboutPage(false)}
+                        style={{position: 'absolute', top: '16px', right: '16px'}}
+                      >
+                        ×
+                      </button>
+                      
+                      <h2 style={{fontSize: '24px', fontWeight: 'bold', color: '#78350f', marginBottom: '24px', textAlign: 'center'}}>
+                        この辞典について
+                      </h2>
+
+                      <div style={{fontSize: '15px', color: '#374151', lineHeight: '1.9'}}>
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ この辞典で扱う毛色の前提
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            この毛色辞典「はむいろパレット」では、<strong>外見からジャンガリアンとして見分けられる姿・顔つき・体型を持つ個体</strong>を基準に、その子たちから観察される毛色をまとめています。
+                          </p>
+                          <p>
+                            ここで扱う名前・分類は、血統の純潔性を証明するためのものではなく、あくまで<strong>「ジャンガリアンとしての外見を持つ個体の毛色」</strong>を整理したものです。
+                          </p>
+                        </section>
+
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ ジャンガリアンは、基本3色しかいない？
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            学術的・原種としてのジャンガリアン（Phodopus sungorus）には、古くから知られている<strong>ノーマル・ブルーサファイア・パールホワイトの3色</strong>が確立した毛色として存在しています。
+                          </p>
+                          <p style={{marginBottom: '12px'}}>
+                            しかし現在、飼育下ではこれら以外にも多くの毛色が見られます。その理由としては、
+                          </p>
+                          <ul style={{paddingLeft: '24px', marginBottom: '12px'}}>
+                            <li>①飼育下で起きた突然変異</li>
+                            <li>②ジャンガリアン系統同士の長年の掛け合わせによる多様化</li>
+                          </ul>
+                          <p style={{marginBottom: '12px'}}>
+                            といった、自然な品種発展によるものが挙げられます。
+                          </p>
+                          <p>
+                            一方で、過去の流通過程において、ジャンガリアンとキャンベルの交雑（ハイブリッド）が含まれる系統も存在しており、現代では「外見がジャンガリアンの個体」であっても、完全に純血のジャンガリアンと断定することが難しい側面があります。
+                          </p>
+                        </section>
+
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ 色だけで純血／ハイブリッドを判断するのはナンセンス
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            よく、
+                          </p>
+                          <div style={{background: '#fef3c7', padding: '12px', borderRadius: '8px', marginBottom: '12px'}}>
+                            <p style={{margin: 0, fontSize: '14px'}}>「ノーマル・ブルサファ・パール＝純ジャンガリアン」</p>
+                            <p style={{margin: 0, fontSize: '14px'}}>「その他の色＝ハイブリッド」</p>
+                          </div>
+                          <p style={{marginBottom: '12px'}}>
+                            と誤解されることがあります。しかし実際には、
+                          </p>
+                          <ul style={{paddingLeft: '24px', marginBottom: '12px'}}>
+                            <li>モカブラウンやムーングレーからノーマル・ブルサファ・パールが生まれる</li>
+                            <li>ブルサファ同士でも、背後に持つ遺伝子で多様なカラーが現れうる</li>
+                          </ul>
+                          <p style={{marginBottom: '12px'}}>
+                            など、今や毛色だけで純血かどうかを判別できません。
+                          </p>
+                          <p>
+                            毛色はあくまで<strong>"外見上の特徴"</strong>のひとつであり、血統の純度を直接示すものではないと考えています。
+                          </p>
+                        </section>
+
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ プディング系・モカ系・ムーン系について
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            これらの毛色には、
+                          </p>
+                          <ul style={{paddingLeft: '24px', marginBottom: '12px'}}>
+                            <li>ジャンガリアンのみの系統で存在する説</li>
+                            <li>キャンベル血統を含むとされる説</li>
+                          </ul>
+                          <p style={{marginBottom: '12px'}}>
+                            の両方が実在しています。
+                          </p>
+                          <p style={{marginBottom: '12px'}}>
+                            現段階では、どちらか一方のルーツに断定できる根拠はなく、複数の起源が存在している可能性も考えられます。
+                          </p>
+                          <p>
+                            はむいろパレットでは、基本3色と言われる毛色以外も、<strong>「ジャンガリアンとしての外見を持つ個体で観察される毛色のひとつ」</strong>として扱っています。
+                          </p>
+                        </section>
+
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ 赤目（ルビーアイ）について
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            ジャンガリアンには、「アルビノを除き赤目は存在しない」という説が一般的です。
+                          </p>
+                          <p style={{marginBottom: '12px'}}>
+                            一方で、ごく少数ながら赤目の個体が確認されているとする説もあります。ですが、こちらは根拠となる情報の信頼性が弱く、現時点では確かな結論が出ているわけではありません。
+                          </p>
+                          <p>
+                            はむいろパレットでは、外見がジャンガリアンとして成立している個体を基準に毛色を整理しているため、赤目の個体についても、掲載の対象としています。
+                          </p>
+                        </section>
+
+                        <section style={{marginBottom: '32px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ 毛色名について
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            はむいろパレットで使用している毛色名は、学術的に定められた正式名称ではありません。
+                          </p>
+                          <p style={{marginBottom: '12px'}}>
+                            同じ毛色でも呼び名が複数あったり、地域・ショップ・ブリーダーによって異なる場合があります。そのためここでは、
+                          </p>
+                          <ul style={{paddingLeft: '24px', marginBottom: '12px'}}>
+                            <li>一般的に広く使われている名前</li>
+                            <li>その毛色の特徴が分かりやすい名前</li>
+                          </ul>
+                          <p style={{marginBottom: '12px'}}>
+                            を便宜的に採用しています。
+                          </p>
+                          <p>
+                            名称は理解しやすくするためのものであり、特定の呼称が唯一正しいものとする意図はありません。
+                          </p>
+                        </section>
+
+                        <section style={{background: 'linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%)', padding: '20px', borderRadius: '12px'}}>
+                          <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#f59e0b', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+                            ✦ 最後に
+                          </h3>
+                          <p style={{marginBottom: '12px'}}>
+                            はむいろパレットは、現段階で分かっていることをまとめた辞典です。毛色の世界はまだまだ未知の部分も多く、これからも新しい情報が得られれば、内容の更新を行っていく予定です。
+                          </p>
+                          <p style={{marginBottom: '12px'}}>
+                            そのため、ここに書かれた内容が<strong>"唯一の正解"</strong>というわけではありません。
+                          </p>
+                          <p style={{margin: 0}}>
+                            そんな不確定なところも含めて、ジャンガリアンの毛色を知るきっかけとして、楽しく役立てていただけたら嬉しいです。
+                          </p>
+                        </section>
+                      </div>
+
+                      <button
+                        onClick={() => setShowAboutPage(false)}
+                        style={{
+                          width: '100%',
+                          padding: '12px',
+                          background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                          border: 'none',
+                          borderRadius: '8px',
+                          color: 'white',
+                          fontSize: '16px',
+                          fontWeight: '600',
+                          cursor: 'pointer',
+                          marginTop: '24px'
                         }}
                       >
                         閉じる
