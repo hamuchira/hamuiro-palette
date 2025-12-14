@@ -149,265 +149,265 @@
           };
 
           const hamsterColors = {
-  normal: {
-    name: 'ノーマル',
-    description: '野生色。最も一般的な毛色で、灰褐色の体に背中の黒いラインが特徴です。',
-    imageUrl: 'images/normal.png',
-    features: ["背中に黒い筋（ドーサルライン）", "灰褐色の体", "お腹は白っぽい"],
-    genotype: 'BBMMYYWWAA BBMMYYWWAa BBMMYYWW-- BbMMYYWWAA BbMMYYWWAa BbMMYYWW-- BbMmYYWWAA BbMmYYWWAa BbMmYYWW-- BBMmYYWWAA BBMmYYWWAa BBMmYYWWaa BBMmYYWW-- BBMMYYWWaa BbMMYYWWaa BbMmYYWWaa'
-  },
-  bluesapphire: {
-    name: 'ブルーサファイア',
-    description: 'ノーマルの色が薄くなったバージョン。青みがかった灰色が美しい毛色です。',
-    imageUrl: 'images/bluesapphire.png',
-    features: ["青みがかった灰色", "ノーマルより淡い", "背中に筋がある"],
-    genotype: 'bbMM'
-  },
-  mokabrown: {
-    name: 'モカブラウン',
-    description: 'ノーマルを薄くしたような茶色。優しい印象の毛色です。',
-    imageUrl: 'images/mokabrown.png',
-    features: ["茶色系", "ノーマルを薄くした色", "落ち着いた印象"],
-    genotype: 'BBmm/Bbmm'
-  },
-  moongray: {
-    name: 'ムーングレー',
-    description: 'ブルサファをクリーム色にしたような色。黄目が特徴です。',
-    imageUrl: 'images/moongray.png',
-    features: ["グレーがかったクリーム色", "黄色い目", "柔らかな印象"],
-    genotype: 'bbmmYYWWaa bbmmYYWWAA bbmmYYWWAa bbmmYYWW--'
-  },
-  creamysapphire: {
-    name: 'クリーミーサファイア',
-    description: 'プドの目。ムーングレーより若干黄色が強い。',
-    imageUrl: 'images/creamysapphire.png',
-    features: ["クリーミーな色合い", "ぶどう目", "黄色味が強い"],
-    genotype: 'bbmmYYWWaa bbmmYYWWAA bbmmYYWWAa bbmmYYWW--'
-  },
-  pearl: {
-    name: 'パール',
-    description: '耳の後ろが黒い。黒が生先に残る白い毛色です。',
-    imageUrl: 'images/pearl.png',
-    features: ["白い体", "耳の後ろが黒い", "黒が先端に残る"],
-    genotype: 'BMyW'
-  },
-  sapphirepearl: {
-    name: 'サファイアパール',
-    description: 'パールよりグレーの範囲が広く、ブルサファより白い。上品な印象です。',
-    imageUrl: 'images/sapphirepearl.png',
-    features: ["グレーの範囲が広い", "ブルサファより白い", "淡いブルーグレー"],
-    genotype: 'bMyW'
-  },
-  whitemoka: {
-    name: 'ホワイトモカ',
-    description: 'ラインが薄い茶色。耳の後ろは白いこともある。',
-    imageUrl: 'images/whitemoka.png',
-    features: ["薄い茶色のライン", "耳の後ろは白い", "優しい色合い"],
-    genotype: 'BmWw'
-  },
-  whitemoon: {
-    name: 'ホワイトムーン',
-    description: 'ほぼ白。背中の線も薄く、耳の後ろは白い。',
-    imageUrl: 'images/whitemoon.png',
-    features: ["ほぼ白", "背中の線も薄い", "耳の後ろは白い"],
-    genotype: 'bmyW'
-  },
-  creamyline: {
-    name: 'クリーミーライン（プディングパール）',
-    description: '背中に黄色の線が特徴的な毛色です。',
-    imageUrl: 'images/creamyline.png',
-    features: ["背中に黄色の線", "クリーム色", "優しい印象"],
-    genotype: 'BMYW'
-  },
-  sapphirecreamyline: {
-    name: 'サファイアクリーミーライン',
-    description: '白&薄いグレーの線？詳細は不明です。',
-    imageUrl: 'images/sapphirecreamyline.png',
-    features: ["白っぽい", "薄いグレーの線", "詳細不明"],
-    genotype: 'bMYW'
-  },
-  creamylinemoka: {
-    name: 'クリーミーラインモカ',
-    description: '茶っぽい線に毛先も茶っぽい。優しい色合いです。',
-    imageUrl: 'images/creamylinemoka.png',
-    features: ["茶色の線", "毛先も茶色", "柔らかな印象"],
-    genotype: 'BmYW'
-  },
-  creamylinemoon: {
-    name: 'クリーミーラインムーン',
-    description: '見た目はほぼクリーミーラインだが、線が薄かったり薄い。目の後ろは白い。',
-    imageUrl: 'images/creamylinemoon.png',
-    features: ["クリーミーラインに似る", "線が薄い", "目の後ろは白い"],
-    genotype: 'bmYW'
-  },
-  pudding: {
-    name: 'プディング',
-    description: '子どもの頃は黄色。大人になると黄緑茶系になり、目っぽくなる子も。',
-    imageUrl: 'images/pudding.png',
-    features: ["子どもは黄色", "成長すると黄緑茶系", "目が赤っぽい場合も"],
-    genotype: 'BMYw'
-  },
-  'sapphirepudding-milktea': {
-    name: 'サファイアプディング（ミルクティー）',
-    description: 'プディングのようにまたはほぼサファイアのようにいずれかの系・黄色や青色が優勢。背に淡い黄緑ミルクティー。',
-    imageUrl: 'images/sapphirepudding-milktea.png',
-    features: ["ミルクティー色", "プディングとサファイアの中間", "淡い色合い"],
-    genotype: 'bMYw'
-  },
-  'sapphirepudding-normal': {
-    name: 'サファイアプディング（ノーマル）',
-    description: 'サファイアプディングの標準的なタイプ。',
-    imageUrl: 'images/sapphirepudding-normal.png',
-    features: ["標準的な色合い", "バランスの取れた色", "中間的な印象"],
-    genotype: ''
-  },
-  'sapphirepudding-beige': {
-    name: 'サファイアプディング（ベージュ）',
-    description: 'ベージュ寄りのサファイアプディング。',
-    imageUrl: 'images/sapphirepudding-beige.png',
-    features: ["ベージュ系", "柔らかい色合い", "優しい印象"],
-    genotype: ''
-  },
-  'sapphirepudding-brown': {
-    name: 'サファイアプディング（ブラウン）',
-    description: 'ブラウン寄りのサファイアプディング。',
-    imageUrl: 'images/sapphirepudding-brown.png',
-    features: ["ブラウン系", "濃いめの色合い", "落ち着いた印象"],
-    genotype: ''
-  },
-  yellowmoka: {
-    name: 'イエローモカ（フレッシュ）',
-    description: '茶より濃い黄緑色。色は生涯は変わらない。',
-    imageUrl: 'images/yellowmoka.png',
-    features: ["濃い黄緑色", "色は変わらない", "茶色より濃い"],
-    genotype: 'BmYw'
-  },
-  yellowmoon: {
-    name: 'イエロームーン',
-    description: 'かなり薄い白に近い黄色。背中の線も薄く、ほぼ白に近い。',
-    imageUrl: 'images/yellowmoon.png',
-    features: ["白に近い薄い黄色", "背中の線も薄い", "ほぼ白"],
-    genotype: 'bmYw'
-  },
-  snowwhite: {
-    name: 'スノーホワイト',
-    description: '背中の線もない真っ白な個体。ブルサファの突然変異ともいわれるが、詳細不明。',
-    imageUrl: 'images/snowwhite.png',
-    features: ["真っ白", "背中の線なし", "耳には色あり"],
-    genotype: '---'
-  },
-  rubyeyemokabrown: {
-    name: 'ルビーアイモカブラウン',
-    description: 'ルビーアイのモカブラウン。普通のモカブラウンよりも少し色が薄くなることも。',
-    imageUrl: 'images/rubyeyemokabrown.png',
-    features: ["耳には少し色が入ることも", "茶色の毛色", "背中の線くっきりめ"],
-    genotype: 'BBmmrr'
-  },
-  rubyeyeyellowmoka: {
-    name: 'ルビーアイイエローモカ',
-    description: 'ルビーアイのイエローモカ。赤い目と黄色の毛色が特徴です。背中の線はくっきりめ',
-    imageUrl: 'images/rubyeyeyellowmoka.png',
-    features: ["耳には少し色が入ることも", "黄色", "背中の線くっきりめ"],
-    genotype: 'BmYwrr'
-  },
-  rubyeyecreamylinemoka: {
-    name: 'ルビーアイクリーミーラインモカ',
-    description: 'ルビーアイのクリーミーラインモカ。赤い目と茶色の線が特徴で、背中以外にも茶色の毛が入ることも。',
-    imageUrl: 'images/rubyeyecreamylinemoka.png',
-    features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線くっきりめ"],
-    genotype: 'BmYWrr'
-  },
-  rubyeyewhitemoka: {
-    name: 'ルビーアイホワイトモカ',
-    description: 'ルビーアイのホワイトモカ。薄い茶色のラインが特徴で、背中以外にも茶色の毛が入ることも。',
-    imageUrl: 'images/rubyeyewhitemoka.png',
-    features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線くっきりめ"],
-    genotype: 'BmWwrr'
-  },
-  rubyeyemoon: {
-    name: 'ルビーアイムーングレー',
-    description: 'ルビーアイのムーングレー。毛色は黒目よりも薄くなりがちです。背中の線はあまり見えない。',
-    imageUrl: 'images/rubyeyemoon.png',
-    features: ["赤い目（ルビーアイ）", "背中の線もごく薄い", "耳の後ろは白い"],
-    genotype: 'bmywrr'
-  },
-  rubyeyeyellowmoon: {
-    name: 'ルビーアイイエロームーン',
-    description: 'ルビーアイのイエロームーン。ほぼ白に近い薄い黄色が特徴です。光の当たり方によっては白く見えることも。',
-    imageUrl: 'images/rubyeyeyellowmoon.png',
-    features: ["赤い目（ルビーアイ）", "背中の線もごく薄い", "耳の後ろは白い"],
-    genotype: 'bmYwrr'
-  },
-  rubyeyecreamylinemoon: {
-    name: 'ルビーアイクリーミーラインムーン',
-    description: 'ルビーアイのクリーミーラインムーン。黄土色、黄みよりの薄い背中の線。体毛はほぼ白です。',
-    imageUrl: 'images/rubyeyecreamylinemoon.png',
-    features: ["赤い目（ルビーアイ）", "黄みよりのごく薄い背中の線", "耳の後ろは白い"],
-    genotype: 'bmYWrr'
-  },
-  rubyeyewhitemoon: {
-    name: 'ルビーアイホワイトムーン',
-    description: 'ルビーアイのホワイトムーン。ほぼ白の毛色が特徴です。耳の後ろも白く、背中の線はほぼ見えません。',
-    imageUrl: 'images/rubyeyewhitemoon.png',
-    features: ["赤い目（ルビーアイ）", "背中の線はほぼ見えない", "耳の後ろは白い"],
-    genotype: 'bmyWrr'
-  },
-  blackjungarian: {
-    name: 'ブラックジャンガリアン',
-    description: '黒い毛色のジャンガリアンハムスター。希少な毛色です。',
-    imageUrl: 'images/blackjungarian.png',
-    features: ["黒い体", "希少な毛色", "濃い色合い"],
-    genotype: '---'
-  },
-  russianblue: {
-    name: 'ロシアンブルー',
-    description: 'ブラックジャンガリアンの色が薄くなったバージョン。青みがかったグレーが特徴です。',
-    imageUrl: 'images/russianblue.png',
-    features: ["青みがかったグレー", "ブラックより薄い", "落ち着いた色"],
-    genotype: '---'
-  },
-  pandajungarian: {
-    name: 'ブラックパンダジャンガリアン',
-    description: 'ブラック遺伝子＋パイド？白と黒の境界線がはっきりしたまだら模様が特徴です。',
-    imageUrl: 'images/pandajungarian.png',
-    features: ["白黒がくっきり", "パンダのような模様", "希少"],
-    genotype: '---'
-  },
-  bluepandajungarian: {
-    name: 'ブルーパンダジャンガリアン',
-    description: 'ブラック遺伝子＋パイド＋サファイア？白とブルーの境界線がはっきりしたまだら模様が特徴です。',
-    imageUrl: 'images/bluepandajungarian.png',
-    features: ["白ブルーがくっきり", "パンダのような模様", "希少"],
-    genotype: '---'
-  },
-  blackmearl: {
-    name: 'ブラックマール',
-    description: 'サファイアパールのブラックキャリア？詳細は不明です。パンダよりも全体が明るく、ふわっとした見た目。',
-    imageUrl: 'images/blackmearl.png',
-    features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
-    genotype: '---'
-  },
-  bluemearl: {
-    name: 'ブルーマール',
-    description: 'サファイアパールのブルーキャリア？詳細は不明です。パンダよりも全体が明るく、ふわっとした見た目。',
-    imageUrl: 'images/bluemearl.png',
-    features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
-    genotype: ''
-  },
-  pied: {
-    name: 'パイド（まだら模様）',
-    description: '様々な毛色にまだら模様が現れたもの。模様の入り方は個体差が大きい。',
-    imageUrl: 'images/pied.png',
-    features: ["まだら模様", "様々な毛色に現れる", "個体差が大きい"],
-    genotype: '---'
-  },
-  winterwhite: {
-    name: 'ウィンターホワイト（冬毛）',
-    description: 'ジャンガリアンは冬になると白くなる個体もいます。日照時間が短くなることに関係しており、3～4ヶ月で元に戻ります。',
-    imageUrl: 'images/winterwhite.png',
-    features: ["冬に白くなる", "たぬき顔になる", "3～4ヶ月で元に戻る"],
-    genotype: '---'
-  },
+            normal: {
+              name: 'ノーマル',
+              description: '野生色。最も一般的な毛色で、黄みがかった濃い茶色の体に背中の線は、濃いこげ茶が特徴。',
+              imageUrl: 'images/normal.png',
+              features: ["濃い茶色の体毛", "背中の線は濃いこげ茶～黒", "お腹は白に黒い毛が混じり"],
+              model: 'ダークモカ'
+            },
+            bluesapphire: {
+              name: 'ブルーサファイア',
+              description: 'ノーマルの色が薄くなったバージョン。青みor黄みがかった灰色が美しい毛色。',
+              imageUrl: 'images/bluesapphire.png',
+              features: ["青みor黄みがかった灰色", "ノーマルより淡い", "背中の線は薄くなることが多い"],
+              model: 'ぷらりね、ねむりーの、かぬれ、すもあ'
+            },
+            mokabrown: {
+              name: 'モカブラウン',
+              description: 'ノーマルを薄くしたような茶色。グレーよりの茶色で赤みがなく、光の加減ではブルサファに見えることも。',
+              imageUrl: 'images/mokabrown.png',
+              features: ["ノーマルを薄くしたチョコ色", "基本的に耳は色つきだが、白い個体も", "背中の線はくっきり"],
+              alias: 'マンダリン',
+              model: 'ブラウニー、トリュフ、カシュー、ブラお、ぱん子'
+            },
+            moongray: {
+              name: 'ムーングレー',
+              description: 'ブルサファをクリーム色にしたような色で淡いグレー～クリーム色。黒目か赤目。',
+              imageUrl: 'images/moongray.png',
+              features: ["クリサファより少しグレーみのある毛色", "耳の後ろは白い", "背中の線は細く薄い"],
+              alias: 'マンダリン、ラベンダー',
+              model: 'ビスコッティ'
+            },
+            creamysapphire: {
+              name: 'クリーミーサファイア',
+              description: 'ブルサファをクリーム色にしたような色で淡いグレー～クリーム色。ブドウ目（暗赤色）が特徴。',
+              imageUrl: 'images/creamysapphire.png',
+              features: ["ぱっと見黒に近い暗い赤紫色の目", "耳の後ろは白い", "体毛の色は淡く、背中の線は細く薄い"],
+              alias: 'マンダリン、ラベンダー',
+              model: 'ぱんけーき、フラン、ロッシェ、フィナンシェ'
+            },
+            pearl: {
+              name: 'パール',
+              description: '白ベースにグレーの線。耳の後ろは色つき。ノーマルの色が毛先に残ることもある。',
+              imageUrl: 'images/pearl.png',
+              features: ["背中の線はグレー", "耳の後ろは色つき", "ノーマルの毛色が毛先に残る"],
+              model: 'ホワイトモカ、ぱるふぇ、ふろまーじゅ'
+            },
+            sapphirepearl: {
+              name: 'サファイアパール',
+              description: 'パールより全体的にグレーの範囲が広く出がち。主に顔やお尻側に薄く色がまぶされる。',
+              imageUrl: 'images/sapphirepearl.png',
+              features: ["グレーの範囲が広め", "パイドっぽく見える個体も", "背中の線はグレー"],
+              model: 'ぱいこ、ぱんな'
+            },
+            whitemoka: {
+              name: 'ホワイトモカ',
+              description: '背中の線が薄い茶色。白を基調にモカ系の色味がうっすら残る。耳の後ろは白いことも。ブドウ目のことが多い。',
+              imageUrl: 'images/whitemoka.png',
+              features: ["薄い茶色のライン", "耳の後ろは白い", "優しい色合い"],
+              model: 'ぴちる'
+            },
+            whitemoon: {
+              name: 'ホワイトムーン',
+              description: 'ムーングレーがさらに白く抜けたように見える、ほぼ白。背中の線も灰みを帯びた薄い黄色、耳の後ろは白い。',
+              imageUrl: 'images/whitemoon.png',
+              features: ["ほぼ白", "背中の線も薄いor見えない", "耳の後ろは白い"],
+              model: 'ぽわれ'
+            },
+            creamyline: {
+              name: 'クリーミーライン',
+              description: '白を基調に、背中の線が黄色の毛色。年をとるとともに、背中の線は消えがち。',
+              imageUrl: 'images/creamyline.png',
+              features: ["背中に黄色の線", "頭に薄い黄色が残ってることも", "耳の後ろはグレー"],
+              alias: 'プディングパール、イエローライン',
+              model: 'くれーぷ、すこーん、しゅぜっと'
+            },
+            sapphirecreamyline: {
+              name: 'サファイアクリーミーライン',
+              description: '背中の線はこげ茶～黄褐色？サファイアパールのように全体的に黄色が乗りがち？ミルクティとの見分けが難しいことも。詳細は不明。',
+              imageUrl: 'images/sapphirecreamyline.png',
+              features: ["白を基調に全体的に黄色が薄く残る", "こげ茶～黄褐色の背中の線", "詳細は不明"],
+              model: 'さぶれ、こふれ'
+            },
+            creamylinemoka: {
+              name: 'クリーミーラインモカ',
+              description: '背中の線は茶色。頭やお尻の毛先に、モカ系の茶色が残りがち。',
+              imageUrl: 'images/creamylinemoka.png',
+              features: ["背中の線は茶色～こげ茶", "背中や頭に淡い茶色が残りがち", "毛先も茶色が残りがち"],
+              model: 'びち太'
+            },
+            creamylinemoon: {
+              name: 'クリーミーラインムーン',
+              description: '見た目はほぼクリーミーラインだが、線の色がクリサファ系。クリーミーラインより薄い。目の後ろは白い。',
+              imageUrl: 'images/creamylinemoon.png',
+              features: ["ほぼ白", "線はクリーミーラインより薄い", "耳の後ろは白い"],
+              model: '-'
+            },
+            pudding: {
+              name: 'プディング',
+              description: '子どもの頃は鮮やかな黄色。大人になると薄い黄～ベージュ系に色変化。個体により色幅が多い。毛先にノーマルの毛色が残り、色むらがある。',
+              imageUrl: 'images/pudding.png',
+              features: ["成長とともに色が変化する", "毛先にノーマルの色が残りやすい", "黄と茶が混じり、色むらが出やすい"],
+              alias: 'イエロージャンガリアン',
+              model: 'ブリュレ、カタラーナ'
+            },
+            'sapphirepudding-milktea': {
+              name: 'サファイアプディング（ミルクティー）',
+              description: '全体が単色に見える淡いベージュ系の毛色。生涯を通して、あまり色は変化しない。',
+              imageUrl: 'images/sapphirepudding-milktea.png',
+              features: ["ごく薄いライトイエロー", "背中の線以外は均一な色", "背中の線は橙みを帯びた黄色"],
+              model: 'まどれーぬ'
+            },
+            'sapphirepudding-normal': {
+              name: 'サファイアプディング（ノーマル）',
+              description: 'ミルクティーよりも濃い黄色～ベージュよりも薄いベージュ。背中の線以外は均一で、色むらはない。',
+              imageUrl: 'images/sapphirepudding-normal.png',
+              features: ["ノーマルの色が毛先に残らない", "背中の線以外は均一な色", "色むらがない"],
+              model: 'わっふる、かすてら、みるふぃーゆ'
+            },
+            'sapphirepudding-beige': {
+              name: 'サファイアプディング（ベージュ）',
+              description: '薄い茶色のサファイアプディング。背中の線は体毛に馴染む、自然な茶色。背中の線以外は均一で、色むらはない。',
+              imageUrl: 'images/sapphirepudding-beige.png',
+              features: ["薄い茶色系、背中の線も茶色", "背中の線以外は均一な色", "色むらがない"],
+              model: 'ぴち子、コレット、ソイラテ'
+            },
+            'sapphirepudding-brown': {
+              name: 'サファイアプディング（ブラウン）',
+              description: 'モカブラウンより茶色が濃く、赤みがある暖かい茶色。背中の線はかなりくっきり、濃いこげ茶。背中の線以外は均一で、色むらはない。生涯を通して、ほぼ色変化がない。',
+              imageUrl: 'images/sapphirepudding-brown.png',
+              features: ["モカブラウンより濃い茶色", "背中の線くっきり", "色むらがなく、生涯通して同じ色"],
+              model: 'カフェモカ、カフェオレ、マキアート'
+            },
+            yellowmoka: {
+              name: 'イエローモカ（フレッシュ）',
+              description: 'モカブラウンに黄色が足された、明るい黄色。サファプディのミルクティーより色は濃いめ。背中の線もくっきり。',
+              imageUrl: 'images/yellowmoka.png',
+              features: ["はっきりした明るい黄色", "背中の線はくっきり", "耳の後ろは白く抜けることも"],
+              model: 'かるめら'
+            },
+            yellowmoon: {
+              name: 'イエロームーン',
+              description: 'かなり薄い白に近い黄色。背中の線も薄く、ほぼ白に近い。光の加減によってクリーミーラインにも見える。',
+              imageUrl: 'images/yellowmoon.png',
+              features: ["白に近い薄い黄色", "背中の線も薄い", "耳の後ろは白い"],
+              model: 'リコッタ'
+            },
+            snowwhite: {
+              name: 'スノーホワイト',
+              description: '背中の線もない真っ白な個体。ブルサファの突然変異ともいわれるが、詳細不明。',
+              imageUrl: 'images/snowwhite.png',
+              features: ["真っ白", "背中の線なし", "耳には色あり"],
+              model: 'わたあめ'
+            },
+            rubyeyemokabrown: {
+              name: 'ルビーアイモカブラウン',
+              description: 'ルビーアイのモカブラウン。普通のモカブラウンよりも色が薄くなったり、黄みによることも。',
+              imageUrl: 'images/rubyeyemokabrown.png',
+              features: ["耳には少し色が入ることも", "茶色の毛色", "背中の線くっきりめ"],
+              model: 'トフィー'
+            },
+            rubyeyeyellowmoka: {
+              name: 'ルビーアイイエローモカ',
+              description: '明るく鮮やかな卵色の毛色。背中の線はくっきりめのオレンジ。耳の後ろは白く抜けることも。',
+              imageUrl: 'images/rubyeyeyellowmoka.png',
+              features: ["耳には少し色が入ることも", "鮮やかな卵色", "背中の線くっきりめ"],
+              alias: 'ルチノーイエロー、アルビノイエロー',
+              model: 'すぷもーね'
+            },
+            rubyeyecreamylinemoka: {
+              name: 'ルビーアイクリーミーラインモカ',
+              description: '赤い目と茶色の線が特徴で、背中以外にも茶色の毛が入ることも。',
+              imageUrl: 'images/rubyeyecreamylinemoka.png',
+              features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線くっきりめ"],
+              model: 'アマレッティ'
+            },
+            rubyeyewhitemoka: {
+              name: 'ルビーアイホワイトモカ',
+              description: '薄い茶色のラインが特徴で、背中以外にも茶色の毛が入ることも。',
+              imageUrl: 'images/rubyeyewhitemoka.png',
+              features: ["耳には少し色が入ることも", "ほぼ白に茶色混じり", "背中の線はくっきりめ"],
+              model: 'フレジェ'
+            },
+            rubyeyemoon: {
+              name: 'ルビーアイムーングレー',
+              description: '毛色は黒目ムーングレーよりも薄くなりがち。背中の線はあまり見えない。耳の後ろは白い',
+              imageUrl: 'images/rubyeyemoon.png',
+              features: ["黒目ムーングレーより全体的に薄い", "背中の線もごく薄い", "耳の後ろは白い"],
+              model: 'ラクレット'
+            },
+            rubyeyeyellowmoon: {
+              name: 'ルビーアイイエロームーン',
+              description: '全体的に薄い黄色が特徴。背中の線はとうもろこし色に近い。耳の後ろは白い',
+              imageUrl: 'images/rubyeyeyellowmoon.png',
+              features: ["全体的に薄い黄色広がる", "背中の線もごく薄い", "耳の後ろは白い"],
+              model: 'そわれ'
+            },
+            rubyeyecreamylinemoon: {
+              name: 'ルビーアイクリーミーラインムーン',
+              description: 'ルビーアイのクリーミーラインムーン。黄みよりの薄い背中の線。体毛はほぼ白。',
+              imageUrl: 'images/rubyeyecreamylinemoon.png',
+              features: ["ほぼ全体的に白", "黄みよりのごく薄い背中の線", "耳の後ろは白い"],
+              model: 'とうふぁ'
+            },
+            rubyeyewhitemoon: {
+              name: 'ルビーアイホワイトムーン',
+              description: 'ルビーアイのホワイトムーン。ほぼ白の毛色が特徴。背中の線は淡い茶色で、ほぼ見えず。耳の後ろも白い。',
+              imageUrl: 'images/rubyeyewhitemoon.png',
+              features: ["ほぼ全体的に白", "背中の線はほぼ見えない", "耳の後ろは白い"],
+              model: 'コーヒー'
+            },
+            blackjungarian: {
+              name: 'ブラックジャンガリアン',
+              description: '全体的に真っ黒な毛色。背中の線はさらに濃い黒だが、全体に馴染んであまり見えない。しっぽは白い。',
+              imageUrl: 'images/blackjungarian.png',
+              features: ["黒い体", "しっぽは白い", "ジャンガリアンとしては新しい"],
+              alias: 'リアルブラック',
+              model: 'アッサム'
+            },
+            russianblue: {
+              name: 'ロシアンブルー',
+              description: 'ブラックジャンガリアンにブルサファの遺伝子が作用？詳細は不明。全体的に均一に青みがかったグレーが特徴。',
+              imageUrl: 'images/russianblue.png',
+              features: ["青みがかったグレー", "背中の線は濃いブルーグレー", "ジャンガリアンとしては新しい"],
+              model: '-'
+            },
+            pandajungarian: {
+              name: 'パンダジャンガリアン',
+              description: 'ブラック遺伝子＋パイド？白と黒の境界線がはっきりしたまだら模様が特徴。',
+              imageUrl: 'images/pandajungarian.png',
+              features: ["白黒がくっきり", "パンダのような模様", "希少"],
+              model: '-'
+            },
+            bluepandajungarian: {
+              name: 'ブルーパンダジャンガリアン',
+              description: 'ブラック遺伝子＋パイド＋サファイア？白とブルーの境界線がはっきりしたまだら模様が特徴。',
+              imageUrl: 'images/bluepandajungarian.png',
+              features: ["白黒がくっきり", "パンダのような模様", "希少"],
+              model: '-'
+            },
+            blackmearl: {
+              name: 'ブラックマール',
+              description: 'サファイアパールのブラックキャリア？詳細は不明。パンダよりも全体が明るく、ふわっとした見た目。',
+              imageUrl: 'images/blackmearl.png',
+              features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
+              model: 'シルベーヌ'
+            },
+            bluemearl: {
+              name: 'ブルーマール',
+              description: 'サファイアパールのブルーキャリア？詳細は不明。パンダよりも全体が明るく、ふわっとした見た目。',
+              imageUrl: 'images/bluemearl.png',
+              features: ["白が多い", "にじんだ境界", "霜降り／マーブル調"],
+              model: 'まめだいふく'
+            },
+            pied: {
+              name: 'パイド（まだら模様）',
+              description: '',
+              imageUrl: 'images/pied.png',
+              features: ["まだら模様", "様々な毛色に現れる", "個体差が大きい"],
+              model: 'まふぃん、なっつ（ミモレット）、アマレッティ、フォレ'
+            },
           };
           const colorKeys = Object.keys(hamsterColors);
 
@@ -620,6 +620,11 @@
                             </ul>
                             <div style={{paddingTop: '16px', borderTop: '1px solid #fde68a'}}>
                               <ShareButtons colorName={hamsterColors[selectedColor].name} isTopPage={false} />
+                              {hamsterColors[selectedColor].model && (
+                                <p style={{fontSize: '13px', color: '#92400e', marginTop: '12px', textAlign: 'center'}}>
+                                  参考モデル: {hamsterColors[selectedColor].model}
+                                </p>
+                              )}
                             </div>
                           </div>
                         </div>
